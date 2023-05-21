@@ -10,7 +10,7 @@
 This is a todo list application developed with Redux for state management and Firebase for authentication. It provides a robust task management system with add, edit, and delete functionalities. The application also supports Google Login using Firebase Authentication.
 
 ## Live Demo
-**[Click here to see it live](https://to-do-redux-firebase.netlify.app/login)**
+**[Click here to see it live](https://to-do-redux-firebase.netlify.app/)**
 
 ![image](https://github.com/Onllsan/TodoRedux/assets/114822626/8bfc57e8-2cca-4f14-a72b-bc349db3bb72)
 ![image](https://github.com/Onllsan/TodoRedux/assets/114822626/367ceb22-cfdb-4103-97ed-ca539d22daf6)
