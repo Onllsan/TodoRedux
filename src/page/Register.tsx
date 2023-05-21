@@ -174,7 +174,7 @@ export function Register() {
             <div className="text-sm font-medium ">
               Back to
               <Link
-                to="/login"
+                to="/"
                 className="text-[#812BFF]  hover:underline dark:text-[#6027B3]"
               >
                 {" "}
