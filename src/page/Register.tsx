@@ -22,7 +22,7 @@ export function Register() {
 
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate("/Home");
     }
   }, [user, navigate]);
 
