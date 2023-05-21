@@ -5,18 +5,18 @@ export const Heading = () => {
   const { user } = useAppSelector((state) => state.auth);
 
   return (
-    <div className="grid grid-cols-3 items-center">
-      <div className="justify-self-start">
+    <div className="flex items-center justify-between mt-9 mx-9 lg:mx-56 md:mx-20 sm:mx-16 gap-4 ">
+      <div className="shrink-0 ">
         {user ? (
           <Link to="/profile">
             {user?.photoUrl ? (
               <img
-                className="rounded-full h-10 w-10"
+                className="rounded-full h-10 w-10 sm:h-12 sm:w-12 hover:shadow-xl shadow"
                 src={user.photoUrl}
                 alt=""
               />
             ) : (
-              <div className="w-24 h-24 mb-3 text-4xl font-bold grid place-content-center bg-green-200 rounded-full shadow-lg">
+              <div className=" h-10 w-10 sm:h-12 sm:w-12 font-bold text-3xl  grid place-content-center bg-[#c084fc]  rounded-full shadow hover:shadow-xl">
                 {user?.email[0].toUpperCase()}
               </div>
             )}
@@ -25,15 +25,13 @@ export const Heading = () => {
           <></>
         )}
       </div>
-      <div className="justify-self-center">
-        <img src="/MyToDo.svg" alt="" />
+      <div className="w-full text-center ">
+        <Link to="/">
+          <img className=" inline-block mx-auto" src="/MyToDo.svg" />
+        </Link>
       </div>
-      <div className="justify-self-end">
-        {!user && (
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-            <Link to="/login">Login</Link>
-          </button>
-        )}
+      <div className="">
+        {/* This is an empty div for keeping the svg in center */}
       </div>
     </div>
   );

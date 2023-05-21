@@ -6,7 +6,7 @@ import { Profile } from "./page/Profile";
 import { useEffect } from "react";
 import { auth } from "./firebase";
 import { useAppDispatch } from "./hooks/storeHook";
-import { login } from "./auth/authSlice";
+import { login, setInitializing } from "./auth/authSlice";
 import { AuthRoutes } from "./auth/AuthRoutes";
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
             photoUrl: user?.photoURL || null,
           })
         );
+      dispatch(setInitializing(false));
     });
 
     return () => unsubscribe();
@@ -35,7 +36,6 @@ function App() {
       </Route>
       <Route path="/login" element={<Login />} />;
       <Route path="/register" element={<Register />} />;
-      {/* <Route path="/login" element={<Auth />} />; */}
     </Routes>
   );
 }

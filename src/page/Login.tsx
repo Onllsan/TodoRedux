@@ -116,10 +116,10 @@ export function Login() {
         onClose={() => setResetPassword(false)}
         handlePasswordReset={handlePasswordReset}
       />
-      <div className="flex items-center justify-center h-screen">
-        <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex items-center justify-center h-screen mx-9">
+        <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
           {error && (
-            <p className="bg-red-400 px-3 py-2 text-center rounded-md text-white">
+            <p className="bg-red-400 px-3 py-2 text-center rounded-md ">
               {error}
             </p>
           )}
@@ -128,19 +128,20 @@ export function Login() {
             className="space-y-6"
             action="#"
           >
-            <h5 className="text-xl font-medium text-gray-900 dark:text-white">
-              Welcome back to My ToDo
-            </h5>
+            <span>
+              <img src="MyToDo.svg" />
+            </span>
+
             <div>
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your email
               </label>
               <input
                 type="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="bg-gray-50 border border-gray-400 text-sm rounded-lg outline-none  block w-full p-2.5 "
                 placeholder="name@example.com"
                 {...register("email")}
               />
@@ -153,14 +154,14 @@ export function Login() {
             <div>
               <label
                 htmlFor="password"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your password
               </label>
               <input
                 type="password"
                 placeholder="••••••••"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="bg-gray-50 border outline-none border-gray-400  text-sm rounded-lg block w-full p-2.5 "
                 {...register("password")}
               />
               {errors.password ? (
@@ -170,46 +171,32 @@ export function Login() {
               )}
             </div>
             <div className="flex items-start">
-              <div className="flex items-start">
-                <div className="flex items-center h-5">
-                  <input
-                    id="remember"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                  />
-                </div>
-                <label
-                  htmlFor="remember"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Remember me
-                </label>
-              </div>
               <button
+                type="button"
                 onClick={() => setResetPassword(true)}
-                className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
+                className="ml-auto text-sm text-[#812BFF] hover:underline dark:text-[#6027B3]"
               >
                 Forgot Password?
               </button>
             </div>
             <button
               disabled={loading}
-              className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="w-full text-white bg-orange hover:bg-lightorange  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             >
               Login to your account
             </button>
             <button
+              type="button"
               onClick={signInwithGoogle}
-              className="w-full text-white bg-pink-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+              className="w-full text-white bg-[#812BFF] hover:bg-[#6027B3]  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
             >
               Login with Google
             </button>
-            <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+            <div className="text-sm font-medium ">
               Not registered?{" "}
               <Link
                 to="/register"
-                className="text-blue-700 hover:underline dark:text-blue-500"
+                className="text-[#812BFF] hover:underline dark:text-[#6027B3]"
               >
                 Create account
               </Link>

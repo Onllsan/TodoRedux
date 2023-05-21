@@ -7,18 +7,17 @@ export default {
     },
     extend: {
       colors: {
+        orange: "#FF8144",
+        lightorange: "#FFB691",
+        lightpink: "#ddd6fe",
         transparentBlack: "rgba(0,0,0,0.85)",
-        sunsetOrange: "#FF4F5A",
-        Tangaroa: "#1A2E35",
-        Gainsboro: "#E1E1E1",
-        greenTeal: "#22C55E",
+
         Gray: "#6B7498",
       },
-    },
-    screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
+      boxShadow: {
+        custom: "0 4px 0px 0px rgba(209, 178, 178, 0.8)",
+        customButton: "0 4px 0px 0px rgba(255, 184, 177, 0.8)",
+      },
     },
   },
   plugins: [],

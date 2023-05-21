@@ -23,21 +23,24 @@ export const ForgotPassword: FC<ForgotPasswordProps> = (props) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center bg-black bg-opacity-50`}
+      className={`fixed top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center bg-transparentBlack`}
       style={{ transform: `translateY(${isOpen ? "0%" : "-100%"})` }}
     >
-      <div className="bg-white rounded-lg p-8 w-96">
-        <h1 className="text-2xl font-bold mb-4">Password Reset</h1>
+      <div className="relative bg-white rounded-lg p-8 w-96 mx-9">
+        <button onClick={onClose} className="absolute right-4 top-4 font-bold">
+          x
+        </button>
+        <h1 className="text-2xl font-bold mb-4 ">Password Reset</h1>
         <input
           type="email"
           value={resetPasswordEmail}
           onChange={(e) => setResetPasswordEmail(e.target.value)}
           placeholder="Email"
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg mb-4"
+          className="outline-none w-full px-3 py-2 border border-gray-300 rounded-lg mb-4"
         />
         <button
           onClick={handlePasswordReset}
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg"
+          className="w-full bg-orange hover:bg-lightorange text-white py-2 px-4 rounded-lg"
         >
           Reset Password
         </button>
@@ -47,12 +50,6 @@ export const ForgotPassword: FC<ForgotPasswordProps> = (props) => {
         {resetPasswordError && (
           <p className="text-red-500 mt-2">{resetPasswordError}</p>
         )}
-        <button
-          onClick={onClose}
-          className="text-gray-500 mt-4 text-sm underline hover:text-gray-700"
-        >
-          Close
-        </button>
       </div>
     </div>
   );
