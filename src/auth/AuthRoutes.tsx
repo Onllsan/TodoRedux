@@ -6,5 +6,5 @@ export function AuthRoutes() {
   if (initializing) {
     return null;
   }
-  return user ? <Outlet /> : <Navigate to="/login" />;
+  return user ? <Outlet /> : <Navigate to="/" />;
 }
