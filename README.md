@@ -2,6 +2,8 @@
 
 ![React](https://img.shields.io/badge/-React-black?style=flat&logo=react)
 ![Redux](https://img.shields.io/badge/-Redux-764ABC?style=flat&logo=redux)
+![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=flat&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat&logo=tailwind-css)
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase)
 
 ## Overview
