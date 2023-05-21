@@ -31,10 +31,10 @@ function App() {
   return (
     <Routes>
       <Route element={<AuthRoutes />}>
-        <Route path="/" element={<ToDo />} />;
+        <Route path="/Home" element={<ToDo />} />;
         <Route path="/profile" element={<Profile />} />;
       </Route>
-      <Route path="/login" element={<Login />} />;
+      <Route path="/" element={<Login />} />;
       <Route path="/register" element={<Register />} />;
     </Routes>
   );
